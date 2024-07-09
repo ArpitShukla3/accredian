@@ -4,6 +4,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { Input } from "@mui/material";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 const style = {
   position: "absolute" as "absolute",
@@ -23,6 +25,16 @@ export default function BasicModal() {
   const handleClose = () => setOpen(false);
   const [email, setEmail] = React.useState("");
   async function submit() {
+    const res:any = await axios.post("http://localhost:3002/refer/refer",{Useremail:"arpitdev323@gmail.com",email:email});
+    if (res.status === 200) {
+      // Show success toast
+      toast.success("Email submitted successfully!");
+    } else {
+      // Show error toast
+      toast.error("Failed to submit email. Please try again.");
+      setOpen(false);
+    }
+    
     setOpen(false);
   }
   return (
@@ -57,6 +69,7 @@ export default function BasicModal() {
           </div>
         </Box>
       </Modal>
+      <Toaster/>
     </div>
   );
 }
