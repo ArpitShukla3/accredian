@@ -1,4 +1,6 @@
+
 import heroImage from "../assets/image.png";
+import BasicModal from "./Modal";
 export default function Section1() {
   return (
     <div className="flex justify-center items-center mt-4">
@@ -8,9 +10,10 @@ export default function Section1() {
           <h3 className="text-4xl">Get a chance to win up to </h3>
           <h2 className="font-bold text-5xl text-blue-500">Rs. 15,000</h2>
           <div className="">
-            <button className="text-white bg-blue-500 rounded-md py-2 px-12 text-2xl font-light">
+              {/* <button className="text-white bg-blue-500 rounded-md py-2 px-12 text-2xl font-light">
               Refer Now
-            </button>
+            </button> */}
+            <BasicModal/>
           </div>
         </div>
         <div className="w-[60%]">

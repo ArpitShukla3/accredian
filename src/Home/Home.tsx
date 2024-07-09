@@ -1,3 +1,5 @@
+import End from "./End.tsx";
+import FAQs from "./FAQs.tsx";
 import Locator from "./Locator";
 import Navbar from "./Navbar";
 import Section1 from "./Section1.tsx";
@@ -11,6 +13,8 @@ export default function Home() {
       <Section1/>
       <Section2/>
       <Section3/>
+      <FAQs/>
+      <End/>
     </div>
   );
 }
