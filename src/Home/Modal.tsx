@@ -25,7 +25,7 @@ export default function BasicModal() {
   const handleClose = () => setOpen(false);
   const [email, setEmail] = React.useState("");
   async function submit() {
-    const res:any = await axios.post("http://localhost:3002/refer/refer",{Useremail:"arpitdev323@gmail.com",email:email});
+    const res:any = await axios.post("https://trello-sjph.onrender.com/refer/refer",{Useremail:"arpitdev323@gmail.com",email:email});
     if (res.status === 200) {
       // Show success toast
       toast.success("Email submitted successfully!");
